@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA License Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EA License Manager</h1>
+        
+        <div class="login-section" id="loginSection">
+            <h2>Admin Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="loginError" class="error"></p>
+        </div>
+        
+        <div class="dashboard" id="dashboard" style="display: none;">
+            <div class="controls">
+                <input type="number" id="daysInput" value="30" min="1">
+                <button onclick="generateLicense()">Generate License</button>
+            </div>
+            
+            <div class="license-list">
+                <h2>Active Licenses</h2>
+                <table id="licenseTable">
+                    <thead>
+                        <tr>
+                            <th>License Key</th>
+                            <th>Expiry Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="licenseTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Node modules and build files
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Environment files
+.env
+*.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+
+# Sensitive files
+*.txt
+app.txt
+notes.txt
+script.txt
+
+# Local development files
+*.local
