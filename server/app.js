@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI)
 // Add this before your routes  HOSTING
 if (process.env.NODE_ENV === 'production') {
   // Serve static files from the React app
-  app.use(express.static(path.join(__dirname, '../dashboard')));
+  app.use(express.static(path.join(__dirname, 'dashboard')));
   
   // Handle React routing, return all requests to React app
   app.get('*', (req, res) => {
